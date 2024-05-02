@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary1: hsl(0, 100%, 74%);
+  /* Red  */
+  --primary2: hsl(154, 59%, 51%);
+  /* Green */
+  --accent1: hsl(248, 32%, 49%);
+  /* Blue */
+  --neutral1: hsl(249, 10%, 26%);
+  /* Dark Blue */
+  --neutral2: hsl(246, 25%, 77%);
+  /* Grayish Blue */
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url(./images/bg-intro-desktop.png), var(--primary1);
+  background-position: 0% -20%;
+  background-size: cover;
+  gap: 2rem;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/***** Text side  */
+.text {
+  flex: 1;
+
+}
+
+.intro {
+  color: #fff;
+  font-size: 1rem;
+  margin: auto;
+  padding: 1rem;
+  width: 32rem;
+}
+
+.intro h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.44rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  font-size: 400;
+}
+
+/***** Registeration side  */
+.registeration {
+  flex: 1;
+  text-align: center;
+  
+}
+
+.registeration button,
+form {
+  width: 70%;
+  margin: auto;
+}
+form{
+  margin-top: 1rem;
+}
+/*** Free trial button */
+.free-trial {
+  padding: 1rem;
+  background-color: var(--accent1);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  color: var(--neutral2);
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.free-trial span {
+  color: #fff;
+  font-weight: 600;
+}
+
+/*** form */
+.form-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: #fff;
+  gap: 1rem;
+}
+
+.form-input {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+.form-input input[type="text"],
+.form-input input[type="password"] {
+  width: inherit;
+  height: 3rem;
+  border: 2px solid var(--neutral2);
+  outline: none;
+  border-radius: 5px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--neutral2);
+  padding: 1rem;
+}
+.form-input input[type="text"]:focus,
+.form-input input[type="password"]:focus{
+  border:2px solid var(--neutral1);
+}
+.form-input img{
+  position: absolute;
+  top:0.8rem;
+  right: 1rem;
+  display: none;
+}
+.form-input span{
+  color:var(--primary1);
+  font-size: 1rem;
+  display: none;
+}
+.form-input button[type="submit"]{
+  width: inherit;
+  background-color: var(--primary2);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color:#fff;
+  text-transform: uppercase;
+  padding: 1rem ;
+  box-shadow: 0px 1px 7px var(--primary2);
+  cursor: pointer;
+}
+.form-input button[type="submit"]:hover{
+  background-color: hsl(154, 59%, 51% ,0.7);
+}
+.terms p{
+  color: var(--neutral2);
+  font-size: .78rem;
+  font-weight: 400;
+}
+.terms span{
+  color: var(--primary1);
+  font-weight: 500;
+  cursor: pointer;
+}
+/**Media queries*/
+@media screen and (max-width: 600px) {
+  .intro{
+    width: 25rem;
+    margin-top: 12rem;
+
+  }
+  .registeration button,
+form{
+  width: 95%;
+  margin-top: 1rem;
+}
+
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: url(./images/bg-intro-mobile.png), var(--primary1);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  
+  .flex {
+    flex-direction: column;
+  }
+
+  .intro {
+    text-align: center;
+    
+  }
+
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p {
+    font-size: 0.88rem;
+  }
+  .registeration button,
+  form{
+    width: 85%;
+  }
+}
+@media screen and (max-width:1280px)  and (min-width:1024px) { 
+  .text{
+    margin-left: 1rem;
+  }
+}
+
+@media screen and (min-height:1366px) {
+  body{
+    height:60vh;
+  }
+  
+}

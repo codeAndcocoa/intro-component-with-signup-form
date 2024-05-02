@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Intro component with sign up form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 1rem;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex">
+        <div class="text">
+          <div class="intro">
+            <h1>Learn to code by<br> watching others</h1>
+            <p>
+              See how experienced developers solve problems in real-time.
+              Watching scripted tutorials is great, but understanding how
+              developers think is invaluable.
+            </p>
+          </div>
+        </div>
+        <div class="registeration">
+          <button class="free-trial">
+            <span>Try it free 7 days</span> then $20/mo. thereafter
+          </button>
+          <form action="/">
+            <div class="form-flex">
+              <div class="form-input">
+                <input type="text" id="fname" placeholder="First Name"  onfocus="this.placeholder=''"
+                onblur="this.placeholder ='First Name'" data-name="First Name"/>
+                <img src="./images/icon-error.svg" alt="error-icon" />
+                <span class="empty"> First Name cannot be empty</span>
+              </div>
+              <div class="form-input">
+                <input type="text" id="lname" placeholder="Last Name" onfocus="this.placeholder=''" 
+                onblur="this.placeholder ='Last Name'" data-name="Last Name"/>
+                <img src="./images/icon-error.svg" alt="error-icon" />
+                <span class="empty"> Last Name cannot be empty</span>
+              </div>
+              <div class="form-input">
+                <input type="text" id="email" placeholder="Email Address" onfocus="this.placeholder=''"
+                onblur="this.placeholder ='Email Address'" data-name="Email Address"/>
+                <img src="./images/icon-error.svg" alt="error-icon" />
+                <span class="empty">Email Address cannot be empty</span>
+                <span class="format">Looks like this is not an email</span>
+              </div>
+              <div class="form-input">
+                <input type="password" id="password" placeholder="Password" onfocus="this.placeholder=''"
+                onblur="this.placeholder ='Password'" data-name="Password"/>
+                <img src="./images/icon-error.svg" alt="error-icon" />
+                <span class="empty">Password cannot be empty</span>
+              </div>
+              <div class="form-input">
+                <button type="submit" id="submit-btn">CLAIM YOUR FREE TRIAL</button>
+              </div>
+              <div class="terms"><p>By clicking the button, you are agreeing to our  <span>Terms and Services</span></p></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+   
+
+ 
+
+ 
+
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Naglaa Raslan</a>.
+      </p>
+    </footer>
+  </body>
+</html>
